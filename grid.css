@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E9ECF4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    max-width: 1900px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: "header header header"
+                         "contenido contenido sidebar"
+                         "widget-1 widget-2 widget-3"
+                         "widget-4 widget-5 widget-6"
+                         "footer footer footer"
+
+}
+
+
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .sidebar,
+.contenedor .footer,
+.contenedor .contenido{
+    background: #000;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+
+.contenedor .header {
+    margin-top: -20px;
+    background: #000;
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    grid-area: header;
+}
+
+.contenedor .contenido {
+    justify-content: space-evenly;
+    grid-area: contenido;
+    background:  linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(31, 12, 26, 0.73));
+}
+
+.contenedor .sidebar {
+    grid-column: 3 / 4;
+    background:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(31, 12, 26, 0.73));
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: span 4;
+    grid-area: sidebar;
+}
+
+.contenedor .header .banner {
+    width: 100%;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2, 
+.contenedor .widget-3, 
+.contenedor .widget-4,
+.contenedor .widget-5,
+.contenedor .widget-6 {
+    background: #c7cfe2;
+    color: #fff;
+    height: 300px;
+    }
+
+.contenedor .widget-1{
+    grid-area: widget-1
+}
+.contenedor .widget-2{
+    grid-area: widget-2
+}
+.contenedor .widget-3{
+    grid-area: widget-3
+}
+.contenedor .widget-4{
+    grid-area: widget-4
+}
+.contenedor .widget-5{
+    grid-area: widget-5
+}
+.contenedor .widget-6{
+    grid-area: widget-6
+}
+
+.contenedor .footer {
+    background: #12203e;
+    color: #fff;
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    z-index: 999px;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.sidebar .taggbox-container{
+max-height: 800px;
+}
